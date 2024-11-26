@@ -14,7 +14,15 @@ Inside the CSV file each row represents a quantum state, whose class label  is s
 
 ## Requirements
 ```
-
+torch                             1.13.1
+numpy                             1.23.5
+qiskit                            1.0.2
+pandas                            1.5.3
+scikit-learn                      1.5.1
+scipy                             1.10.1
+seaborn                           0.13.0
+matplotlib                        3.8.0
+tqdm
 ```
 
 
