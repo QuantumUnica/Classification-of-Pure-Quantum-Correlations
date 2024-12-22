@@ -35,7 +35,7 @@ tqdm
 
 - **Andrés Camilo Granda Arango** - [GitHub Profile](https://github.com/agrandaarango)
 - **Giuseppe Sergioli** - [GitHub Profile](https://github.com/GiuseppeSergioli)
-- **Roberto Giuntini**
+- **Roberto Giuntini** - [GitHub Profile](https://github.com/robertogiuntini)
 - **Carla Rieger** - [GitHub Profile](https://github.com/carlasophie)
 
 
