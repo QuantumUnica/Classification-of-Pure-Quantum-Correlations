@@ -38,8 +38,8 @@ def get_classifier_vs_dataset_heatmap(score_dFrame=None, metric='balanced_accura
                 cbar_kws={'label': 'Balanced Accuracy'}).set(xlabel='Number of samples', ylabel='classifier')
 
     plt.yticks(fontsize=11)
-    plt.xlabel('Losses', fontsize=11)
-    plt.ylabel('Wins', fontsize=11)
+    plt.xlabel('Dataset size', fontsize=11)
+    plt.ylabel('Classifier', fontsize=11)
     fig.tight_layout()
     
 
