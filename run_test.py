@@ -35,8 +35,8 @@ label_col = -1
 dev = 'cuda' if torch.cuda.is_available() else 'cpu'
 print('Using {} device'.format(dev))
 
-for experiment in ['2_qubits_2_labels']:
-    datasets_sizes = [10000] #range(10000, 35000, 5000)
+for experiment in ['2_qubits_2_labels', '3_qubit_3_labels']:    # Folder names
+    datasets_sizes = range(10000, 35000, 5000)
 
     # Parameters for Crossvalidation and Grid search
     metric=metric='balanced_accuracy'
@@ -50,6 +50,16 @@ for experiment in ['2_qubits_2_labels']:
     classifiers = [
             ('PGM', PGMHQC_gpu_cpu_dtype(dtype=torch.float64, n_splits=n_PGM_splits, device=dev)),
             ('Linear Discriminant Analysis', LinearDiscriminantAnalysis()),
+            ('Support Vector Machine', SVC()),
+            ('Quadratic Discriminant Analysis', QuadraticDiscriminantAnalysis()), 
+            ('Dummy Classifier', DummyClassifier()  ),
+            ('Nearest Neighbors', KNeighborsClassifier()),
+            ('Nearest Centroid', NearestCentroid()),
+            ('MLP', make_pipeline(StandardScaler(), MLPClassifier())),   
+            ('Bernoulli Naive Bayes', BernoulliNB()   ),
+            ('Gaussian Naive Bayes', GaussianNB()   ),
+            ('Random Forest', RandomForestClassifier()),
+            ('Extra Tree', ExtraTreesClassifier())
         ]
     
     if experiment[0]=='2':
